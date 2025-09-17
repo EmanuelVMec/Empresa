@@ -61,8 +61,6 @@ export default function AppMovil() {
               href="/servicios"
               className="group inline-flex items-center font-semibold transition-all duration-200 text-[#1BC6D9] hover:text-[#2A8CFF] relative"
             >
-              <span className="relative z-10">Ver más servicios</span>
-              <span aria-hidden="true" className="ml-2 group-hover:translate-x-1 transition-transform duration-200 inline-block">→</span>
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#1BC6D9] to-[#2A8CFF] group-hover:w-full transition-all duration-300"></div>
             </a>
           </div>

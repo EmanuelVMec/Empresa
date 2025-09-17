@@ -186,19 +186,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              
-              {/* Botones de acción */}
-              <div className="flex items-center justify-center gap-x-6 mb-8 scroll-animate">
-                <a
-                  href="/servicios"
-                  className="rounded-md bg-[#2A8CFF] px-5 py-3 text-base font-semibold text-white shadow-lg hover:bg-[#1BC6D9] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2A8CFF] transition-all duration-200"
-                >
-                  Ver servicios
-                </a>
-                <a href="/soporte" className="text-base font-semibold text-[#1BC6D9] hover:text-[#2A8CFF] transition-all duration-200">
-                  Soporte técnico <span aria-hidden="true">→</span>
-                </a>
-              </div>
+                            
             </div>
           </div>
 
@@ -424,7 +412,7 @@ export default function Home() {
                 </p>
                 <div className="mt-6">
                   <a
-                    href="/servicios"
+                    href="/soporte"
                     className="inline-block bg-[#2A8CFF] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#1BC6D9] transition-all duration-300 shadow-lg"
                   >
                     Únete a Ellos

@@ -341,11 +341,7 @@ export default function PWeb() {
               <span className="relative z-10">Solicitar Cotización</span>
               <div className="absolute inset-0 rounded-md bg-gradient-to-r from-[#2A8CFF] to-[#1BC6D9] blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
             </a>
-            <a href="/servicios" className="group text-base font-semibold leading-6 text-[#1BC6D9] hover:text-[#2A8CFF] transition-all duration-200 relative">
-              <span className="relative z-10">Ver más servicios</span>
-              <span aria-hidden="true" className="ml-1 group-hover:translate-x-1 transition-transform duration-200 inline-block">→</span>
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#1BC6D9] to-[#2A8CFF] group-hover:w-full transition-all duration-300"></div>
-            </a>
+            
           </div>
         </div>
         
