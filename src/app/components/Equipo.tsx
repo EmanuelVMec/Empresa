@@ -13,31 +13,31 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     id: 1,
-    name: "Henry Soledispa",
+    name: "Angel Navarrete",
     role: "Developer",
     description: "Especialista en desarrollo full-stack con experiencia en React, Node.js y tecnologías modernas. Apasionado por crear soluciones innovadoras y escalables.",
-    imageUrl: ""
+    imageUrl: "https://res.cloudinary.com/ddmf4jqh4/image/upload/v1758293549/IMG_4681_zkznax.jpg"
   },
   {
     id: 2,
     name: "Joshua Vinces",
     role: "UI/UX Designer",
-    description: "Diseñadora creativa especializada en experiencias de usuario intuitivas y interfaces modernas que conectan con el usuario final.",
-    imageUrl: ""
+    description: "Diseñador creativo especializado en experiencias de usuario intuitivas y interfaces modernas que conectan con el usuario final.",
+    imageUrl: "https://res.cloudinary.com/ddmf4jqh4/image/upload/v1758293549/IMG_4678_yziyjl.jpg"
   },
   {
     id: 3,
-    name: "Angel Navarrete",
+    name: "Henry Soledispa",
     role: "Project Manager",
     description: "Líder de proyectos con amplia experiencia en metodologías ágiles y gestión de equipos multidisciplinarios orientados a resultados.",
-    imageUrl: ""
+    imageUrl: "https://res.cloudinary.com/ddmf4jqh4/image/upload/v1758293549/IMG_4687_s3xcsi.jpg"
   },
   {
     id: 4,
-    name: "Angel Navarrete",
+    name: "Cristian Mora",
     role: "Project Manager",
     description: "Líder de proyectos con amplia experiencia en metodologías ágiles y gestión de equipos multidisciplinarios orientados a resultados.",
-    imageUrl: ""
+    imageUrl: "https://res.cloudinary.com/ddmf4jqh4/image/upload/v1758295003/WhatsApp_Image_2025-09-19_at_10.14.33_qgkzgv.jpg"
   }
 ];
 
@@ -91,15 +91,15 @@ export default function Team() {
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300"></div>
 
               <div className="relative p-6 sm:p-8 lg:p-10 h-full flex flex-col justify-between z-10">
-                <div>
-                  <p className="text-base font-medium tracking-widest text-[#1BC6D9] uppercase">
+                {/* Nombre y rol más pequeños y más arriba */}
+                <div className="mb-2">
+                  <p className="text-xs font-medium tracking-widest text-[#1BC6D9] uppercase mb-1">
                     {member.role}
                   </p>
-                  <p className="text-2xl font-bold text-white sm:text-3xl mt-3">
+                  <p className="text-lg font-semibold text-white">
                     {member.name}
                   </p>
                 </div>
-
                 <div className="mt-auto">
                   <div className="translate-y-8 transform opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
                     <p className="text-base text-white leading-relaxed font-medium text-shadow-lg">
