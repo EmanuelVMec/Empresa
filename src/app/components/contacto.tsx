@@ -202,8 +202,6 @@ export default function Contacto() {
 
         {/* Header del formulario con imágenes llamativas */}
         <div className="mx-auto max-w-4xl text-center mb-16">
-          
-          
           {/* Título mejorado con efectos de diseño */}
           <div className="relative mb-8">
             <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl animate-fadeInUp bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent relative z-10">
@@ -220,31 +218,6 @@ export default function Contacto() {
             <br />
             🚀 Impulsa tu negocio al siguiente nivel
           </p>
-
-          {/* Estadísticas llamativas sin imágenes */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 animate-fadeInUp" style={{animationDelay: '0.4s'}}>
-            <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-md rounded-xl p-6 border border-blue-500/30">
-              <div className="w-12 h-12 mx-auto rounded-lg mb-3 bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
-                <span className="text-2xl">📊</span>
-              </div>
-              <div className="text-3xl font-bold text-white">500+</div>
-              <div className="text-gray-300">Proyectos Exitosos</div>
-            </div>
-            <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-md rounded-xl p-6 border border-purple-500/30">
-              <div className="w-12 h-12 mx-auto rounded-lg mb-3 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
-                <span className="text-2xl">❤️</span>
-              </div>
-              <div className="text-3xl font-bold text-white">98%</div>
-              <div className="text-gray-300">Clientes Satisfechos</div>
-            </div>
-            <div className="bg-gradient-to-r from-green-600/20 to-teal-600/20 backdrop-blur-md rounded-xl p-6 border border-green-500/30">
-              <div className="w-12 h-12 mx-auto rounded-lg mb-3 bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center">
-                <span className="text-2xl">⚡</span>
-              </div>
-              <div className="text-3xl font-bold text-white">2h</div>
-              <div className="text-gray-300">Tiempo de Respuesta</div>
-            </div>
-          </div>
         </div>
 
         {/* Formulario mejorado */}
@@ -562,7 +535,7 @@ export default function Contacto() {
                 <span className="text-2xl">🛠️</span>
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Soporte Técnico</h4>
-              <p className="text-gray-300 text-sm">3 meses de soporte técnico gratuito incluido</p>
+              <p className="text-gray-300 text-sm">2 meses de soporte técnico gratuito incluido</p>
             </div>
             <div className="text-center p-6 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl border border-purple-500/30">
               <div className="w-12 h-12 mx-auto rounded-xl mb-4 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">

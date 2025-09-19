@@ -130,6 +130,31 @@ const SoporteContent = () => (
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileServiciosOpen, setMobileServiciosOpen] = useState(false);
+  const [mobileSoporteOpen, setMobileSoporteOpen] = useState(false);
+
+  // Opciones para los menús desplegables en móvil
+  const serviciosLinks = [
+    { href: "/Paginasweb", label: "Desarrollo de Paginas Web" },
+    { href: "/Movil", label: "Desarrollo de Aplicaciones móviles" },
+    { href: "/ChatBot", label: "ChatBots" },
+    { href: "/MarketingD", label: "Marketing Digital" },
+    { href: "/Hosteo", label: "Hosting" },
+    { href: "/soporte", label: "Contactar" },
+  ];
+  const soporteLinks = [
+    { href: "/soporte", label: "Contáctanos" },
+    { href: "/FAQS", label: "FAQ" },
+  ];
+
+  // Función para manejar navegación y cerrar menú móvil
+  const handleMobileNavigate = (href: string) => {
+    setMobileMenuOpen(false);
+    setMobileServiciosOpen(false);
+    setMobileSoporteOpen(false);
+    // Navegación programática
+    window.location.href = href;
+  };
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-[#0A0A0A]/85 backdrop-blur-md border-b border-white/20">
@@ -199,40 +224,74 @@ export default function Header() {
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-white/10">
-              <div className="space-y-2 py-6">
-                {navigation.map((item) => {
-                  if (item.name === "Servicios") {
-                    return (
-                      <FlyoutLink key={item.name} FlyoutContent={ServiciosContent}>
-                        Servicios
-                      </FlyoutLink>
-                    );
-                  }
-                  if (item.name === "Soporte") {
-                    return (
-                      <FlyoutLink key={item.name} href={item.href} FlyoutContent={SoporteContent}>
-                        Soporte
-                      </FlyoutLink>
-                    );
-                  }
-                  return (
-                    <Link
-                      key={item.name}
-                      href={item.href ?? "#"}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
-                    >
-                      {item.name}
-                    </Link>
-                  );
-                })}
+              <div className="space-y-2 py-6 flex flex-col items-center justify-center">
+                {/* Servicios */}
+                <div className="w-full flex justify-center">
+                  <button
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5 text-center w-full"
+                    onClick={() => {
+                      setMobileServiciosOpen((v) => !v);
+                      setMobileSoporteOpen(false);
+                    }}
+                  >
+                    Servicios
+                  </button>
+                </div>
+                {mobileServiciosOpen && (
+                  <div className="w-full flex flex-col items-center gap-1 mb-2">
+                    {serviciosLinks.map((item) => (
+                      <button
+                        key={item.href}
+                        className="block w-11/12 rounded-lg px-3 py-2 text-base font-medium text-white bg-[#222] hover:bg-[#333] text-center"
+                        onClick={() => handleMobileNavigate(item.href)}
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+                {/* Soporte */}
+                <div className="w-full flex justify-center">
+                  <button
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5 text-center w-full"
+                    onClick={() => {
+                      setMobileSoporteOpen((v) => !v);
+                      setMobileServiciosOpen(false);
+                    }}
+                  >
+                    Soporte
+                  </button>
+                </div>
+                {mobileSoporteOpen && (
+                  <div className="w-full flex flex-col items-center gap-1 mb-2">
+                    {soporteLinks.map((item) => (
+                      <button
+                        key={item.href}
+                        className="block w-11/12 rounded-lg px-3 py-2 text-base font-medium text-white bg-[#222] hover:bg-[#333] text-center"
+                        onClick={() => handleMobileNavigate(item.href)}
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+                {/* Resto de opciones */}
+                {navigation
+                  .filter((item) => item.name !== "Servicios" && item.name !== "Soporte")
+                  .map((item) => (
+                    <div key={item.name} className="w-full flex justify-center">
+                      <Link
+                        href={item.href ?? "#"}
+                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5 text-center"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    </div>
+                  ))}
               </div>
               <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
-                >
-                  Log in
-                </a>
+                
               </div>
             </div>
           </div>

@@ -104,7 +104,7 @@ export default function Home() {
                     Tecnología e Innovación
                   </p>
                 </div>
-                <h2 className="max-w-4xl mb-8 font-sans text-4xl font-bold leading-none tracking-tight text-[#2A8CFF] sm:text-5xl lg:text-6xl md:mx-auto title-glow scroll-animate">
+                <h2 className="max-w-4xl mb-8 font-sans text-4xl font-bold leading-none tracking-tight text-[#2A8CFF] sm:text-5xl lg:text-6xl md:mx-auto scroll-animate">
                   <span className="relative inline-block">
                     <span className="relative">Impulsamos</span>
                   </span>{' '}
@@ -193,7 +193,9 @@ export default function Home() {
           {/* Sección de misión, visión y valores rediseñada */}
           <section className="w-full mt-8 mb-8 px-4 scroll-animate">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-bold text-center text-[#2A8CFF] mb-12 title-glow">Nuestra Esencia</h2>
+              <h2 className="text-4xl font-bold text-center text-[#2A8CFF] mb-12 scroll-animate">
+                Nuestra Esencia
+              </h2>
               
               <div className="grid md:grid-cols-3 gap-8 mb-12">
                 {/* Misión */}
@@ -258,7 +260,9 @@ export default function Home() {
           {/* Sección de servicios rediseñada */}
           <section className="w-full mt-20 mb-10 px-4 scroll-animate">
             <div className="max-w-7xl mx-auto">
-              <h2 className="text-4xl font-bold text-center text-[#2A8CFF] mb-12 title-glow">Nuestros Servicios</h2>
+              <h2 className="text-4xl font-bold text-center text-[#2A8CFF] mb-12">
+                Nuestros Servicios
+              </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
                 <div className="bg-gradient-to-br from-[#2A8CFF]/10 via-[#3B82F6]/5 to-[#1BC6D9]/10 p-8 rounded-2xl border border-[#2A8CFF]/20 backdrop-blur-sm hover:border-[#2A8CFF]/40 transition-all duration-300 group scroll-animate max-w-sm w-full">
@@ -425,7 +429,7 @@ export default function Home() {
           {/* Carrusel de Tecnologías */}
           <section className="w-full mt-12 mb-8 px-4 scroll-animate">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-bold text-center text-[#2A8CFF] mb-8 title-glow">
+              <h2 className="text-4xl font-bold text-center text-[#2A8CFF] mb-8">
                 Stack Tecnológico
               </h2>
               
@@ -433,7 +437,7 @@ export default function Home() {
                 {/* Botón Izquierda */}
                 <button 
                   onClick={prevSlide}
-                  className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gradient-to-r from-[#2A8CFF] to-[#1BC6D9] text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+                  className="hidden sm:absolute sm:left-0 sm:top-1/2 sm:-translate-y-1/2 sm:z-10 sm:bg-gradient-to-r sm:from-[#2A8CFF] sm:to-[#1BC6D9] sm:text-white sm:w-12 sm:h-12 sm:rounded-full sm:flex sm:items-center sm:justify-center sm:shadow-lg sm:hover:shadow-xl sm:transition-all sm:duration-300 sm:hover:scale-110"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -443,7 +447,7 @@ export default function Home() {
                 {/* Botón Derecha */}
                 <button 
                   onClick={nextSlide}
-                  className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gradient-to-r from-[#2A8CFF] to-[#1BC6D9] text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+                  className="hidden sm:absolute sm:right-0 sm:top-1/2 sm:-translate-y-1/2 sm:z-10 sm:bg-gradient-to-r sm:from-[#2A8CFF] sm:to-[#1BC6D9] sm:text-white sm:w-12 sm:h-12 sm:rounded-full sm:flex sm:items-center sm:justify-center sm:shadow-lg sm:hover:shadow-xl sm:transition-all sm:duration-300 sm:hover:scale-110"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -451,14 +455,18 @@ export default function Home() {
                 </button>
 
                 {/* Contenedor del carrusel */}
-                <div className="overflow-hidden mx-16">
+                <div className="overflow-x-auto sm:overflow-hidden mx-0 sm:mx-16">
                   <div 
                     id="tech-carousel-content"
-                    className="flex transition-transform duration-500 ease-in-out"
-                    style={{ transform: 'translateX(0%)' }}
+                    className="flex transition-transform duration-500 ease-in-out gap-4 sm:gap-0"
+                    style={{ 
+                      transform: 'translateX(0%)',
+                      scrollSnapType: 'x mandatory',
+                    }}
                   >
+                    {/* Cada tarjeta ahora es más pequeña en móvil y usa scroll horizontal */}
                     {/* React */}
-                    <div className="min-w-[280px] mx-4 bg-gradient-to-br from-[#61DAFB]/10 via-[#282C34]/5 to-[#61DAFB]/20 p-6 rounded-2xl border border-[#61DAFB]/30 backdrop-blur-sm hover:border-[#61DAFB]/50 transition-all duration-300 group">
+                    <div className="min-w-[220px] max-w-[220px] sm:min-w-[280px] sm:max-w-none mx-2 sm:mx-4 bg-gradient-to-br from-[#61DAFB]/10 via-[#282C34]/5 to-[#61DAFB]/20 p-4 sm:p-6 rounded-2xl border border-[#61DAFB]/30 backdrop-blur-sm hover:border-[#61DAFB]/50 transition-all duration-300 group scroll-snap-align-start">
                       <div className="flex flex-col items-center text-center">
                         <div className="w-20 h-20 mb-4 flex items-center justify-center">
                           <svg viewBox="-11.5 -10.23174 23 20.46348" className="w-16 h-16 text-[#61DAFB]" fill="currentColor">
@@ -476,7 +484,7 @@ export default function Home() {
                     </div>
 
                     {/* TypeScript/JSX */}
-                    <div className="min-w-[280px] mx-4 bg-gradient-to-br from-[#3178C6]/10 via-[#007ACC]/5 to-[#3178C6]/20 p-6 rounded-2xl border border-[#3178C6]/30 backdrop-blur-sm hover:border-[#3178C6]/50 transition-all duration-300 group">
+                    <div className="min-w-[220px] max-w-[220px] sm:min-w-[280px] sm:max-w-none mx-2 sm:mx-4 bg-gradient-to-br from-[#3178C6]/10 via-[#007ACC]/5 to-[#3178C6]/20 p-4 sm:p-6 rounded-2xl border border-[#3178C6]/30 backdrop-blur-sm hover:border-[#3178C6]/50 transition-all duration-300 group scroll-snap-align-start">
                       <div className="flex flex-col items-center text-center">
                         <div className="w-20 h-20 mb-4 flex items-center justify-center">
                           <svg viewBox="0 0 24 24" className="w-16 h-16 text-[#3178C6]" fill="currentColor">
@@ -489,7 +497,7 @@ export default function Home() {
                     </div>
 
                     {/* CSS */}
-                    <div className="min-w-[280px] mx-4 bg-gradient-to-br from-[#1572B6]/10 via-[#264de4]/5 to-[#1572B6]/20 p-8 rounded-2xl border border-[#1572B6]/30 backdrop-blur-sm hover:border-[#1572B6]/50 transition-all duration-300 group">
+                    <div className="min-w-[220px] max-w-[220px] sm:min-w-[280px] sm:max-w-none mx-2 sm:mx-4 bg-gradient-to-br from-[#1572B6]/10 via-[#264de4]/5 to-[#1572B6]/20 p-4 sm:p-8 rounded-2xl border border-[#1572B6]/30 backdrop-blur-sm hover:border-[#1572B6]/50 transition-all duration-300 group scroll-snap-align-start">
                       <div className="flex flex-col items-center text-center">
                         <div className="w-20 h-20 mb-4 flex items-center justify-center">
                           <svg viewBox="0 0 24 24" className="w-16 h-16 text-[#1572B6]" fill="currentColor">
@@ -502,7 +510,7 @@ export default function Home() {
                     </div>
 
                     {/* HTML */}
-                    <div className="min-w-[280px] mx-4 bg-gradient-to-br from-[#E34F26]/10 via-[#f06529]/5 to-[#E34F26]/20 p-8 rounded-2xl border border-[#E34F26]/30 backdrop-blur-sm hover:border-[#E34F26]/50 transition-all duration-300 group">
+                    <div className="min-w-[220px] max-w-[220px] sm:min-w-[280px] sm:max-w-none mx-2 sm:mx-4 bg-gradient-to-br from-[#E34F26]/10 via-[#f06529]/5 to-[#E34F26]/20 p-4 sm:p-8 rounded-2xl border border-[#E34F26]/30 backdrop-blur-sm hover:border-[#E34F26]/50 transition-all duration-300 group scroll-snap-align-start">
                       <div className="flex flex-col items-center text-center">
                         <div className="w-20 h-20 mb-4 flex items-center justify-center">
                           <svg viewBox="0 0 24 24" className="w-16 h-16 text-[#E34F26]" fill="currentColor">
@@ -515,7 +523,7 @@ export default function Home() {
                     </div>
 
                     {/* Django */}
-                    <div className="min-w-[280px] mx-4 bg-gradient-to-br from-[#092E20]/10 via-[#0c4b33]/5 to-[#092E20]/20 p-8 rounded-2xl border border-[#092E20]/30 backdrop-blur-sm hover:border-[#0c4b33]/50 transition-all duration-300 group">
+                    <div className="min-w-[220px] max-w-[220px] sm:min-w-[280px] sm:max-w-none mx-2 sm:mx-4 bg-gradient-to-br from-[#092E20]/10 via-[#0c4b33]/5 to-[#092E20]/20 p-4 sm:p-8 rounded-2xl border border-[#092E20]/30 backdrop-blur-sm hover:border-[#0c4b33]/50 transition-all duration-300 group scroll-snap-align-start">
                       <div className="flex flex-col items-center text-center">
                         <div className="w-20 h-20 mb-4 flex items-center justify-center">
                           <svg viewBox="0 0 24 24" className="w-16 h-16 text-[#0c4b33]" fill="currentColor">
@@ -528,7 +536,7 @@ export default function Home() {
                     </div>
 
                     {/* Python */}
-                    <div className="min-w-[280px] mx-4 bg-gradient-to-br from-[#3776AB]/10 via-[#FFD43B]/5 to-[#3776AB]/20 p-8 rounded-2xl border border-[#3776AB]/30 backdrop-blur-sm hover:border-[#3776AB]/50 transition-all duration-300 group">
+                    <div className="min-w-[220px] max-w-[220px] sm:min-w-[280px] sm:max-w-none mx-2 sm:mx-4 bg-gradient-to-br from-[#3776AB]/10 via-[#FFD43B]/5 to-[#3776AB]/20 p-4 sm:p-8 rounded-2xl border border-[#3776AB]/30 backdrop-blur-sm hover:border-[#3776AB]/50 transition-all duration-300 group scroll-snap-align-start">
                       <div className="flex flex-col items-center text-center">
                         <div className="w-20 h-20 mb-4 flex items-center justify-center">
                           <svg viewBox="0 0 24 24" className="w-16 h-16 text-[#3776AB]" fill="currentColor">
@@ -541,7 +549,7 @@ export default function Home() {
                     </div>
 
                     {/* PHP */}
-                    <div className="min-w-[280px] mx-4 bg-gradient-to-br from-[#777BB4]/10 via-[#8892BF]/5 to-[#777BB4]/20 p-8 rounded-2xl border border-[#777BB4]/30 backdrop-blur-sm hover:border-[#777BB4]/50 transition-all duration-300 group">
+                    <div className="min-w-[220px] max-w-[220px] sm:min-w-[280px] sm:max-w-none mx-2 sm:mx-4 bg-gradient-to-br from-[#777BB4]/10 via-[#8892BF]/5 to-[#777BB4]/20 p-4 sm:p-8 rounded-2xl border border-[#777BB4]/30 backdrop-blur-sm hover:border-[#777BB4]/50 transition-all duration-300 group scroll-snap-align-start">
                       <div className="flex flex-col items-center text-center">
                         <div className="w-20 h-20 mb-4 flex items-center justify-center">
                           <div className="text-[#777BB4] text-4xl font-bold italic">
@@ -554,7 +562,7 @@ export default function Home() {
                     </div>
 
                     {/* JSX */}
-                    <div className="min-w-[280px] mx-4 bg-gradient-to-br from-[#F7DF1E]/10 via-[#FFEB3B]/5 to-[#F7DF1E]/20 p-8 rounded-2xl border border-[#F7DF1E]/30 backdrop-blur-sm hover:border-[#F7DF1E]/50 transition-all duration-300 group">
+                    <div className="min-w-[220px] max-w-[220px] sm:min-w-[280px] sm:max-w-none mx-2 sm:mx-4 bg-gradient-to-br from-[#F7DF1E]/10 via-[#FFEB3B]/5 to-[#F7DF1E]/20 p-4 sm:p-8 rounded-2xl border border-[#F7DF1E]/30 backdrop-blur-sm hover:border-[#F7DF1E]/50 transition-all duration-300 group scroll-snap-align-start">
                       <div className="flex flex-col items-center text-center">
                         <div className="w-20 h-20 mb-4 flex items-center justify-center">
                           <svg viewBox="0 0 630 630" className="w-16 h-16">
@@ -568,7 +576,7 @@ export default function Home() {
                     </div>
 
                     {/* Node.js */}
-                    <div className="min-w-[280px] mx-4 bg-gradient-to-br from-[#339933]/10 via-[#68A063]/5 to-[#339933]/20 p-8 rounded-2xl border border-[#339933]/30 backdrop-blur-sm hover:border-[#339933]/50 transition-all duration-300 group">
+                    <div className="min-w-[220px] max-w-[220px] sm:min-w-[280px] sm:max-w-none mx-2 sm:mx-4 bg-gradient-to-br from-[#339933]/10 via-[#68A063]/5 to-[#339933]/20 p-4 sm:p-8 rounded-2xl border border-[#339933]/30 backdrop-blur-sm hover:border-[#339933]/50 transition-all duration-300 group scroll-snap-align-start">
                       <div className="flex flex-col items-center text-center">
                         <div className="w-20 h-20 mb-4 flex items-center justify-center">
                           <svg viewBox="0 0 24 24" className="w-16 h-16 text-[#339933]" fill="currentColor">
@@ -582,8 +590,8 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Indicadores */}
-                <div className="flex justify-center mt-8 space-x-2">
+                {/* Indicadores solo en desktop */}
+                <div className="hidden sm:flex justify-center mt-8 space-x-2">
                   {Array.from({ length: maxSlides }, (_, index) => (
                     <div 
                       key={index}

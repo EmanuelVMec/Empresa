@@ -250,29 +250,18 @@ export default function AppMovil() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
+           
             {
-              name: "EcoTrack",
-              category: "Sustentabilidad",
-              description: "App para monitoreo de huella de carbono personal con gamificación",
-              downloads: "50K+",
-              rating: "4.8",
-              color: "from-green-500/20 to-blue-500/20"
+              name: "ODR",
+              category: "Servicios de Arbitraje",
+              description: "¿Qué es? Es un método digital para solucionar conflictos, que puede incluir la negociación y el arbitraje, utilizando plataformas tecnológicas.",
+              color: "from-blue-500/20 to-indigo-500/20"
             },
             {
-              name: "FitCoach Pro",
-              category: "Fitness & Salud",
-              description: "Entrenador personal virtual con IA y seguimiento de progreso",
-              downloads: "100K+",
-              rating: "4.9",
-              color: "from-orange-500/20 to-red-500/20"
-            },
-            {
-              name: "CryptoWallet",
-              category: "Fintech",
-              description: "Billetera digital segura para criptomonedas con trading integrado",
-              downloads: "25K+",
-              rating: "4.7",
-              color: "from-purple-500/20 to-pink-500/20"
+              name: "Naula Corp",
+              category: "Educación Corporativa",
+              description: "App de capacitación y gestión de talento para empresas, con cursos, evaluaciones y seguimiento.",
+              color: "from-cyan-500/20 to-purple-500/20"
             }
           ].map((app, index) => (
             <div key={app.name} className={`p-6 bg-gradient-to-br ${app.color} rounded-xl border border-white/10 backdrop-blur-sm hover:border-[#2A8CFF]/40 transition-all duration-300 group cursor-pointer animate-fadeInUp`} style={{animationDelay: `${2800 + index * 200}ms`}}>
@@ -288,21 +277,14 @@ export default function AppMovil() {
                 </div>
                 <div className="text-right">
                   <div className="flex items-center text-yellow-400 mb-1">
-                    <svg className="w-4 h-4 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
-                    <span className="text-white font-semibold">{app.rating}</span>
+                    
                   </div>
-                  <p className="text-[#B5B5B5] text-xs">{app.downloads} descargas</p>
                 </div>
               </div>
               <p className="text-[#B5B5B5] group-hover:text-white transition-colors duration-300">{app.description}</p>
               <div className="mt-4 flex justify-center space-x-4">
                 <div className="flex items-center space-x-1 text-[#B5B5B5] text-sm">
-                  <svg className="w-4 h-4 text-[#2A8CFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-                  </svg>
-                  <span>iOS</span>
+                  
                 </div>
                 <div className="flex items-center space-x-1 text-[#B5B5B5] text-sm">
                   <svg className="w-4 h-4 text-[#1BC6D9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -316,69 +298,6 @@ export default function AppMovil() {
         </div>
       </div>
 
-      {/* Testimonios */}
-      <div className="max-w-7xl mx-auto px-4 mt-32 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 title-glow-cyan">
-            Lo que dicen nuestros <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1BC6D9] to-[#2A8CFF]">clientes</span>
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            {
-              name: "María González",
-              company: "CEO, EcoStart",
-              text: "GWS transformó nuestra idea en una app increíble. El proceso fue transparente y el resultado superó nuestras expectativas.",
-              avatar: <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-              </svg>,
-              rating: 5
-            },
-            {
-              name: "Carlos Mendez",
-              company: "Founder, FitLife",
-              text: "La atención al detalle y la calidad del código es excepcional. Nuestra app tiene más de 100K usuarios activos.",
-              avatar: <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-              </svg>,
-              rating: 5
-            },
-            {
-              name: "Ana Rodriguez",
-              company: "CTO, FinanceApp",
-              text: "Equipo altamente profesional. Cumplieron todos los plazos y la app es robusta y escalable.",
-              avatar: <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-              </svg>,
-              rating: 5
-            }
-          ].map((testimonial, index) => (
-            <div key={testimonial.name} className={`p-6 bg-gradient-to-br from-white/5 to-white/10 rounded-xl border border-white/10 backdrop-blur-sm hover:border-[#2A8CFF]/40 transition-all duration-300 group animate-fadeInUp`} style={{animationDelay: `${3400 + index * 200}ms`}}>
-              <div className="flex items-center mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                ))}
-              </div>
-<p className="text-[#B5B5B5] mb-6 italic group-hover:text-white transition-colors duration-300">
-  &ldquo;{testimonial.text}&rdquo;
-</p>
-
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-[#2A8CFF] to-[#1BC6D9] rounded-full flex items-center justify-center mr-4">
-                  {testimonial.avatar}
-                </div>
-                <div>
-                  <h4 className="text-white font-semibold group-hover:text-[#2A8CFF] transition-colors duration-300">{testimonial.name}</h4>
-                  <p className="text-[#B5B5B5] text-sm">{testimonial.company}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
 
       {/* Call to Action Final */}
       <div className="max-w-4xl mx-auto px-4 mt-32 mb-16 relative z-10">
